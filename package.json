@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack",
+    "serve": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/vika41130/ReactWebpackAnimation/issues"
   },
-  "homepage": "https://github.com/vika41130/ReactWebpackAnimation#readme"
+  "homepage": "https://github.com/vika41130/ReactWebpackAnimation#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
 }

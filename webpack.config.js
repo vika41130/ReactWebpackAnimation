@@ -3,14 +3,27 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
-    entry: './src/index.js',
+    entry: {
+        bundle: './src/index.js',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.[chunkhash].js',
+        filename: '[name].[chunkhash].js',
         // publicPath: './'
         // note:
         // publicPath: './': for build prod
         // not publicPath: for webpack-web-server or build prod
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                defaultVendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'all',
+                    priority: 1
+                },
+            }
+        }
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),

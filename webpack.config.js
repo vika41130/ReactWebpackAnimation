@@ -7,7 +7,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.[chunkhash].js',
-        publicPath: '/dist'
+        publicPath: './'
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -21,7 +21,7 @@ const config = {
         // }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: 'src/index.html'
         })
     ]
 }

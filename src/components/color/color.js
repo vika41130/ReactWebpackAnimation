@@ -9,7 +9,10 @@ class ANight extends Component {
 
     render() {
         return (
-            <div>
+            <div className="color-wrapper">
+                <div className="moon">
+
+                </div>
                 <div className="path">
                     <div className="pacman">
                         <div className="orb"></div>

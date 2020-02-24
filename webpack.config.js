@@ -9,8 +9,8 @@ const config = {
         filename: 'bundle.[chunkhash].js',
         // publicPath: './'
         // note:
-        // publicPath: './': for build produc
-        // not publicPath: for webpack-web-server
+        // publicPath: './': for build prod
+        // not publicPath: for webpack-web-server or build prod
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
